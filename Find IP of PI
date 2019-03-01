@@ -1,0 +1,5 @@
+# How to find ip address of another computer connected to this ubuntu one through shared lan
+sudo lshw -c network -businfo
+sudo arp-scan -I enp7s0 --localnet
+
+# In windows, it's much easier, spimply type arp -a to scan  
