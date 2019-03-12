@@ -1,0 +1,3 @@
+# Revert base environment to default
+conda activate base
+conda install --revision 0
