@@ -1,0 +1,3 @@
+#Remove a program
+dpkg --list #Show all programs installed
+sudo apt --purge remove programname #Remove a program

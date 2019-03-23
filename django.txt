@@ -1,0 +1,23 @@
+#Create django project
+django-admin startproject projectname
+
+#Create database tables
+python manage.py migrate
+
+#Run server at address 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:8000
+
+#Create app in project
+python manage.py startapp appname
+
+#Find django path
+import django
+print(django.__path__)"
+
+#Create template inside an app name app.html
+appname/templates/appname/app.html
+
+#For loop in template
+{% for img in unknown_group %}
+    <li><img onclick="change_group('{{forloop.counter}}')" src="{%static img %}"></li>
+{% endfor %}

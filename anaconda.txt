@@ -1,3 +1,5 @@
 # Revert base environment to default
 conda activate base
 conda install --revision 0
+# Remove a environment 
+conda env remove -n environment_name

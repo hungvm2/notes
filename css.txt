@@ -1,0 +1,6 @@
+#Align child center
+display: flex;
+## Vertical
+align-items: center:
+## Horizon
+justify-content: center;
