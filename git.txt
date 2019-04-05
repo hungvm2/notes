@@ -1,1 +1,15 @@
 
+# create a new repository on the command line
+echo "# Customer360" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/hungvm2/Customer360.git
+git push -u origin master
+# push an existing repository from the command line
+git remote add origin https://github.com/hungvm2/Customer360.git
+git push -u origin master
+
+# config username and email
+git config user.name <name>
+git config user.email <email>

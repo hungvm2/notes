@@ -1,0 +1,18 @@
+# Go in edit mode
+i
+# Quit without save
+:q!
+# Write and quit
+:wq
+# Go in the end of file
+shift + G
+# Search and replace in the whole document
+:%s/<searched_text>/<replaced_text>/g
+# Search a word 
+/<searched_text>
+## Next to next matched word
+n
+# Go to the very first letter of document
+gg
+## Go to the line number <x> 
+<x>gg
