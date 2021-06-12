@@ -32,7 +32,7 @@ hugo server -D
 https://youngkin.github.io/post/createafreeblogsite/#overview
 
 ## Publish page
-git submodule add -b master git@hungvm2.github.io.git public
+git submodule add -b main git@github.com:hungvm2/hungvm2.github.io public
 
 
 ## Config url
