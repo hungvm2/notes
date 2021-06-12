@@ -1,0 +1,32 @@
+#Download GO: 
+cd /usr/local ; wget https://golang.org/dl/go1.16.5.linux-amd64.tar.gz
+#Extract:
+rm -rf go ; tar -xzf go1.16.5.linux-amd64.tar.gz
+
+#Add go path to fish:
+set PATH $PATH /usr/local/go/bin
+set PATH $PATH /root/go/bin
+
+
+#Download and install Hugo:
+cd /home/hungvm/src ; git clone https://github.com/gohugoio/hugo.git ; cd hugo ; go install --tags extended
+
+#Download blog repo:
+cd /home/hungvm/Documents/ ; git clone git@github.com:hungvm2/hungvm2.github.io.git ; cd hungvm2.github.io ; hugo new site .
+
+#Add themes: https://themes.gohugo.io/
+git submodule add https://github.com/reuixiy/hugo-theme-meme.git themes/hugo-theme-meme
+
+
+#Config theme:
+echo 'theme = "hugo-theme-meme"' >> config.toml
+
+
+#Create new Post:
+hugo new post/yolo-versions-comparision.md
+
+#Start dev server:
+hugo server -D
+
+### other configurations 
+https://youngkin.github.io/post/createafreeblogsite/#overview
