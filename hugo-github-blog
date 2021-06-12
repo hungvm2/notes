@@ -30,3 +30,13 @@ hugo server -D
 
 ### other configurations 
 https://youngkin.github.io/post/createafreeblogsite/#overview
+
+## Publish page
+git submodule add -b master git@hungvm2.github.io.git public
+
+
+## Config url
+git submodule add -b main git@hungvm2.github.io.git public
+
+./deploy.sh
+
