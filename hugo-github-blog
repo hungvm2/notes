@@ -12,31 +12,40 @@ set PATH $PATH /root/go/bin
 cd /home/hungvm/src ; git clone https://github.com/gohugoio/hugo.git ; cd hugo ; go install --tags extended
 
 #Download blog repo:
-cd /home/hungvm/Documents/ ; git clone git@github.com:hungvm2/hungvm2.github.io.git ; cd hungvm2.github.io ; hugo new site .
+cd /mnt/Data/SoftwareProjects/ ; mkdir hungvm2.github.io.git ; cd hungvm2.github.io
+git init ; git add README.md ; git commit -m "first commit" ; git branch -M main
+git remote add origin git@github.com:hungvm2/hungvm2.github.io.git.private ; git push -u origin main
 
 #Add themes: https://themes.gohugo.io/
 git submodule add https://github.com/reuixiy/hugo-theme-meme.git themes/hugo-theme-meme
 
+# Create new site
+hugo new site . --force
 
 #Config theme:
 echo 'theme = "hugo-theme-meme"' >> config.toml
 
-
-#Create new Post:
-hugo new post/yolo-versions-comparision.md
-
-#Start dev server:
-hugo server -D
-
-
 ## Publish page
 git submodule add -b main git@github.com:hungvm2/hungvm2.github.io public
 
+hugo -D
 
 ## Config url
 git submodule add -b main git@hungvm2.github.io.git public
+cd public
+git commit -m "first commit"
+git branch -M main
+git push -u origin main
 
+
+#Create new Post:
+hugo new post/the-first-post.md
+
+## Deploy every time after that
 ./deploy.sh
+
+#Start dev server:
+hugo server -D
 
 ### other tutorials 
 https://youngkin.github.io/post/createafreeblogsite/#overview
