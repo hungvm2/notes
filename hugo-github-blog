@@ -28,8 +28,6 @@ hugo new post/yolo-versions-comparision.md
 #Start dev server:
 hugo server -D
 
-### other configurations 
-https://youngkin.github.io/post/createafreeblogsite/#overview
 
 ## Publish page
 git submodule add -b main git@github.com:hungvm2/hungvm2.github.io public
@@ -40,3 +38,6 @@ git submodule add -b main git@hungvm2.github.io.git public
 
 ./deploy.sh
 
+### other tutorials 
+https://youngkin.github.io/post/createafreeblogsite/#overview
+https://dev.to/aormsby/how-to-set-up-a-hugo-site-on-github-pages-with-git-submodules-106p
